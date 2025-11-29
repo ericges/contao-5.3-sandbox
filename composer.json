@@ -1,0 +1,67 @@
+{
+    "name": "ericges/contao-5.3-sandbox",
+    "type": "contao-theme",
+    "description": "This is a sandbox installation of the Contao open source CMS.",
+    "version": "5.3",
+    "license": "CC-BY-SA-4.0",
+    "authors": [
+        {
+            "name": "Eric Gesemann",
+            "homepage": "https://github.com/ericges"
+        },
+        {
+            "name": "Sascha Müller",
+            "homepage": "https://github.com/sascha-mueller"
+        },
+        {
+            "name": "Contao Community",
+            "homepage": "https://to.contao.org/demo-contributors"
+        }
+    ],
+    "funding": [
+        {
+            "type": "other",
+            "url": "https://to.contao.org/donate"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/contao/contao-demo/issues",
+        "forum": "https://community.contao.org",
+        "source": "https://github.com/contao/contao-demo",
+        "docs": "https://docs.contao.org"
+    },
+    "require": {
+        "contao-components/swiper": "^12",
+        "contao/calendar-bundle": "5.3.*",
+        "contao/comments-bundle": "5.3.*",
+        "contao/conflicts": "*@dev",
+        "contao/faq-bundle": "5.3.*",
+        "contao/listing-bundle": "5.3.*",
+        "contao/manager-bundle": "5.3.*",
+        "contao/news-bundle": "5.3.*",
+        "contao/newsletter-bundle": "5.3.*",
+        "heimrichhannot/contao-flare-bundle": "dev-main",
+        "heimrichhannot/contao-form-type-bundle": "^0.2"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/mnt/repos/heimrichhannot/contao-flare-bundle",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
+    "extra": {
+        "contao-component-dir": "assets",
+        "public-dir": "public"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@php vendor/bin/contao-setup"
+        ],
+        "post-update-cmd": [
+            "@php vendor/bin/contao-setup"
+        ]
+    }
+}
