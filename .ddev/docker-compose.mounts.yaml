@@ -1,0 +1,4 @@
+services:
+    web:
+        volumes:
+            - '${HOST_MOUNT_REPOS_PATH}:/mnt/repos/heimrichhannot'
