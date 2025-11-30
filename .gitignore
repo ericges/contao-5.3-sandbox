@@ -1,3 +1,9 @@
 /.idea
 /.ddev/.env
 .env.local
+/assets
+/contao-manager
+/public
+/system
+/var
+/vendor
