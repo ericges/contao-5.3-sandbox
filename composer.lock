@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "402dc2a2d23d32d9a4b8e3abca34db3d",
+    "content-hash": "12219d8ddd35a29a0dfbc501b40e7356",
     "packages": [
         {
             "name": "ausi/slug-generator",
@@ -269,16 +269,16 @@
         },
         {
             "name": "contao-components/ace",
-            "version": "1.43.4",
+            "version": "1.43.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/contao-components/ace.git",
-                "reference": "fd247d86231c6ca479b2e7fb604598af245b9a6d"
+                "reference": "40be4460249c1d300389cda8fb15d4e861ae0f45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contao-components/ace/zipball/fd247d86231c6ca479b2e7fb604598af245b9a6d",
-                "reference": "fd247d86231c6ca479b2e7fb604598af245b9a6d",
+                "url": "https://api.github.com/repos/contao-components/ace/zipball/40be4460249c1d300389cda8fb15d4e861ae0f45",
+                "reference": "40be4460249c1d300389cda8fb15d4e861ae0f45",
                 "shasum": ""
             },
             "require": {
@@ -298,9 +298,9 @@
             "description": "ACE code editor integration for Contao Open Source CMS",
             "support": {
                 "issues": "https://github.com/contao-components/ace/issues",
-                "source": "https://github.com/contao-components/ace/tree/1.43.4"
+                "source": "https://github.com/contao-components/ace/tree/1.43.5"
             },
-            "time": "2025-10-24T09:21:57+00:00"
+            "time": "2025-12-03T16:35:06+00:00"
         },
         {
             "name": "contao-components/chosen",
@@ -1153,12 +1153,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/contao/conflicts.git",
-                "reference": "b0ee3c5db181caa49c532a8dff2cc12ff5cafd02"
+                "reference": "de33cc62122a8157073d5354c698f0c77589c41d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contao/conflicts/zipball/b0ee3c5db181caa49c532a8dff2cc12ff5cafd02",
-                "reference": "b0ee3c5db181caa49c532a8dff2cc12ff5cafd02",
+                "url": "https://api.github.com/repos/contao/conflicts/zipball/de33cc62122a8157073d5354c698f0c77589c41d",
+                "reference": "de33cc62122a8157073d5354c698f0c77589c41d",
                 "shasum": ""
             },
             "conflict": {
@@ -1179,9 +1179,10 @@
                 "symfony/http-kernel": "5.4.1 || 5.4.12 || 6.4.9 || 7.1.2",
                 "symfony/routing": "6.4.0",
                 "symfony/security": "3.3.17 || 3.4.7 || 3.4.8 || 3.4.11",
-                "symfony/serializer": "7.4.0",
+                "symfony/serializer": "7.4.0 || 8.0.0",
                 "symfony/swiftmailer-bundle": "2.6.* <2.6.2",
                 "symfony/twig-bundle": "4.1.0",
+                "symfony/var-exporter": ">=8",
                 "symfony/web-profiler-bundle": "6.1.* <6.1.2",
                 "twig/intl-extra": "3.9.0",
                 "twig/twig": "2.7.0 || 3.9.0 || 3.10.0 || 3.10.1",
@@ -1209,7 +1210,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2025-11-28T15:52:45+00:00"
+            "time": "2025-12-02T17:20:11+00:00"
         },
         {
             "name": "contao/core-bundle",
@@ -3156,16 +3157,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "2.20.8",
+            "version": "2.20.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/orm.git",
-                "reference": "5bff0919a78c86238536a9b5396024fe3603b5d1"
+                "reference": "87f1ba74e04c8694ca00099f3c64706ebac0b114"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/orm/zipball/5bff0919a78c86238536a9b5396024fe3603b5d1",
-                "reference": "5bff0919a78c86238536a9b5396024fe3603b5d1",
+                "url": "https://api.github.com/repos/doctrine/orm/zipball/87f1ba74e04c8694ca00099f3c64706ebac0b114",
+                "reference": "87f1ba74e04c8694ca00099f3c64706ebac0b114",
                 "shasum": ""
             },
             "require": {
@@ -3183,7 +3184,7 @@
                 "ext-ctype": "*",
                 "php": "^7.1 || ^8.0",
                 "psr/cache": "^1 || ^2 || ^3",
-                "symfony/console": "^4.2 || ^5.0 || ^6.0 || ^7.0",
+                "symfony/console": "^4.2 || ^5.0 || ^6.0 || ^7.0 || ^8.0",
                 "symfony/polyfill-php72": "^1.23",
                 "symfony/polyfill-php80": "^1.16"
             },
@@ -3201,7 +3202,7 @@
                 "psr/log": "^1 || ^2 || ^3",
                 "symfony/cache": "^4.4 || ^5.4 || ^6.4 || ^7.0",
                 "symfony/var-exporter": "^4.4 || ^5.4 || ^6.2 || ^7.0",
-                "symfony/yaml": "^3.4 || ^4.0 || ^5.0 || ^6.0 || ^7.0"
+                "symfony/yaml": "^3.4 || ^4.0 || ^5.0 || ^6.0 || ^7.0 || ^8.0"
             },
             "suggest": {
                 "ext-dom": "Provides support for XSD validation for XML mapping files",
@@ -3251,9 +3252,9 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/orm/issues",
-                "source": "https://github.com/doctrine/orm/tree/2.20.8"
+                "source": "https://github.com/doctrine/orm/tree/2.20.9"
             },
-            "time": "2025-11-10T13:35:45+00:00"
+            "time": "2025-11-29T14:03:56+00:00"
         },
         {
             "name": "doctrine/persistence",
@@ -3845,17 +3846,11 @@
         },
         {
             "name": "heimrichhannot/contao-flare-bundle",
-            "version": "0.0.25",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/heimrichhannot/contao-flare-bundle.git",
-                "reference": "68f2fe3848fbbe0fb7d84797fd435ffdf86c63bc"
-            },
+            "version": "dev-main",
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/heimrichhannot/contao-flare-bundle/zipball/68f2fe3848fbbe0fb7d84797fd435ffdf86c63bc",
-                "reference": "68f2fe3848fbbe0fb7d84797fd435ffdf86c63bc",
-                "shasum": ""
+                "type": "path",
+                "url": "/mnt/repos/heimrichhannot/contao-flare-bundle",
+                "reference": "9b1cd755fcd8579b0f5d2d9bbd6338af59d1a370"
             },
             "require": {
                 "contao/core-bundle": "^4.13 || ^5.0",
@@ -3864,14 +3859,14 @@
                 "mvo/contao-group-widget": "^1.5",
                 "php": "^8.2",
                 "psr/log": "^1.0 || ^2.0 || ^3.0",
-                "symfony/config": "^5.4 || ^6.0 || ^7.0",
+                "symfony/config": "^5.4 || ^6.0",
                 "symfony/event-dispatcher-contracts": "^1.0 || ^2.0 || ^3.0",
-                "symfony/filesystem": "^5.4 || ^6.0 || ^7.0",
-                "symfony/form": "^5.4 || ^6.0 || ^7.0",
-                "symfony/http-foundation": "^5.4 || ^6.0 || ^7.0",
-                "symfony/http-kernel": "^5.4 || ^6.0 || ^7.0",
-                "symfony/string": "^5.2 || ^6.0 || ^7.0",
-                "symfony/validator": "^5.4 || ^6.0 || ^7.0",
+                "symfony/filesystem": "^5.4 || ^6.0",
+                "symfony/form": "^5.4 || ^6.0",
+                "symfony/http-foundation": "^5.4 || ^6.0",
+                "symfony/http-kernel": "^5.4 || ^6.0",
+                "symfony/string": "^5.2 || ^6.0",
+                "symfony/validator": "^5.4 || ^6.0",
                 "twig/twig": "^3.0"
             },
             "require-dev": {
@@ -3893,16 +3888,19 @@
                     "HeimrichHannot\\FlareBundle\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "autoload-dev": {
+                "psr-4": {
+                    "HeimrichHannot\\FlareBundle\\Tests\\": "tests/"
+                }
+            },
             "license": [
                 "LGPL-3.0-or-later"
             ],
             "description": "Filter, list, and read entities with this bundle for Contao Open Source CMS.",
-            "support": {
-                "issues": "https://github.com/heimrichhannot/contao-flare-bundle/issues",
-                "source": "https://github.com/heimrichhannot/contao-flare-bundle/tree/0.0.25"
-            },
-            "time": "2025-11-27T10:55:23+00:00"
+            "transport-options": {
+                "symlink": true,
+                "relative": false
+            }
         },
         {
             "name": "heimrichhannot/contao-form-type-bundle",
@@ -4095,31 +4093,31 @@
         },
         {
             "name": "knplabs/knp-menu-bundle",
-            "version": "v3.6.0",
+            "version": "v3.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/KnpLabs/KnpMenuBundle.git",
-                "reference": "eabe07859751a0ed77c04dcb6b908fcd2c336cf3"
+                "reference": "aa22e57f8f41c34ad5e382aae4d0c12998c0eb5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/eabe07859751a0ed77c04dcb6b908fcd2c336cf3",
-                "reference": "eabe07859751a0ed77c04dcb6b908fcd2c336cf3",
+                "url": "https://api.github.com/repos/KnpLabs/KnpMenuBundle/zipball/aa22e57f8f41c34ad5e382aae4d0c12998c0eb5a",
+                "reference": "aa22e57f8f41c34ad5e382aae4d0c12998c0eb5a",
                 "shasum": ""
             },
             "require": {
                 "knplabs/knp-menu": "^3.8",
                 "php": "^8.1",
-                "symfony/config": "^5.4 | ^6.0 | ^7.0",
-                "symfony/dependency-injection": "^5.4 | ^6.0 | ^7.0",
+                "symfony/config": "^6.4 | ^7.0 | ^8.0",
+                "symfony/dependency-injection": "^6.4 | ^7.0 | ^8.0",
                 "symfony/deprecation-contracts": "^2.5 | ^3.3",
-                "symfony/http-kernel": "^5.4 | ^6.0 | ^7.0"
+                "symfony/http-kernel": "^6.4 | ^7.0 | ^8.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "^10.5 | ^11.5 | ^12.1",
-                "symfony/expression-language": "^5.4 | ^6.0 | ^7.0",
-                "symfony/phpunit-bridge": "^6.0 | ^7.0",
-                "symfony/templating": "^5.4 | ^6.0 | ^7.0"
+                "phpunit/phpunit": "^10.5 | ^11.5 | ^12.4",
+                "symfony/expression-language": "^6.4 | ^7.0 | ^8.0",
+                "symfony/phpunit-bridge": "^7.0 | ^8.0",
+                "symfony/templating": "^6.4 | ^7.0 | ^8.0"
             },
             "type": "symfony-bundle",
             "extra": {
@@ -4156,9 +4154,9 @@
             ],
             "support": {
                 "issues": "https://github.com/KnpLabs/KnpMenuBundle/issues",
-                "source": "https://github.com/KnpLabs/KnpMenuBundle/tree/v3.6.0"
+                "source": "https://github.com/KnpLabs/KnpMenuBundle/tree/v3.7.0"
             },
-            "time": "2025-06-14T11:37:33+00:00"
+            "time": "2025-11-30T08:30:04+00:00"
         },
         {
             "name": "knplabs/knp-time-bundle",
@@ -5574,20 +5572,20 @@
         },
         {
             "name": "nette/utils",
-            "version": "v4.0.9",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/utils.git",
-                "reference": "505a30ad386daa5211f08a318e47015b501cad30"
+                "reference": "fa1f0b8261ed150447979eb22e373b7b7ad5a8e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/utils/zipball/505a30ad386daa5211f08a318e47015b501cad30",
-                "reference": "505a30ad386daa5211f08a318e47015b501cad30",
+                "url": "https://api.github.com/repos/nette/utils/zipball/fa1f0b8261ed150447979eb22e373b7b7ad5a8e0",
+                "reference": "fa1f0b8261ed150447979eb22e373b7b7ad5a8e0",
                 "shasum": ""
             },
             "require": {
-                "php": "8.0 - 8.5"
+                "php": "8.2 - 8.5"
             },
             "conflict": {
                 "nette/finder": "<3",
@@ -5610,7 +5608,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.0-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
@@ -5657,9 +5655,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/utils/issues",
-                "source": "https://github.com/nette/utils/tree/v4.0.9"
+                "source": "https://github.com/nette/utils/tree/v4.1.0"
             },
-            "time": "2025-10-31T00:45:47+00:00"
+            "time": "2025-12-01T17:49:23+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -6780,7 +6778,7 @@
         },
         {
             "name": "scheb/2fa-backup-code",
-            "version": "v7.12.1",
+            "version": "v7.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-backup-code.git",
@@ -6823,22 +6821,22 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-backup-code/tree/v7.12.1"
+                "source": "https://github.com/scheb/2fa-backup-code/tree/v7.12.2"
             },
             "time": "2025-11-20T13:35:24+00:00"
         },
         {
             "name": "scheb/2fa-bundle",
-            "version": "v7.12.1",
+            "version": "v7.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-bundle.git",
-                "reference": "2056c313e4ceff8098f970d99d428ddd2a3bfbf5"
+                "reference": "9dd7d9f03a5bd5d105b0aed2fe80ce861e6d92bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scheb/2fa-bundle/zipball/2056c313e4ceff8098f970d99d428ddd2a3bfbf5",
-                "reference": "2056c313e4ceff8098f970d99d428ddd2a3bfbf5",
+                "url": "https://api.github.com/repos/scheb/2fa-bundle/zipball/9dd7d9f03a5bd5d105b0aed2fe80ce861e6d92bb",
+                "reference": "9dd7d9f03a5bd5d105b0aed2fe80ce861e6d92bb",
                 "shasum": ""
             },
             "require": {
@@ -6891,22 +6889,22 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-bundle/tree/v7.12.1"
+                "source": "https://github.com/scheb/2fa-bundle/tree/v7.12.2"
             },
-            "time": "2025-11-25T15:24:27+00:00"
+            "time": "2025-12-01T15:40:59+00:00"
         },
         {
             "name": "scheb/2fa-trusted-device",
-            "version": "v7.12.1",
+            "version": "v7.12.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/scheb/2fa-trusted-device.git",
-                "reference": "e1026a977d9cdb794f349b828ab956e9341d7790"
+                "reference": "ae3a5819faccbf151af078f432e4e6c97bb44ebf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/scheb/2fa-trusted-device/zipball/e1026a977d9cdb794f349b828ab956e9341d7790",
-                "reference": "e1026a977d9cdb794f349b828ab956e9341d7790",
+                "url": "https://api.github.com/repos/scheb/2fa-trusted-device/zipball/ae3a5819faccbf151af078f432e4e6c97bb44ebf",
+                "reference": "ae3a5819faccbf151af078f432e4e6c97bb44ebf",
                 "shasum": ""
             },
             "require": {
@@ -6942,9 +6940,9 @@
                 "two-step"
             ],
             "support": {
-                "source": "https://github.com/scheb/2fa-trusted-device/tree/v7.12.1"
+                "source": "https://github.com/scheb/2fa-trusted-device/tree/v7.12.2"
             },
-            "time": "2025-11-20T13:35:24+00:00"
+            "time": "2025-12-01T15:40:59+00:00"
         },
         {
             "name": "scrivo/highlight.php",
@@ -7342,29 +7340,29 @@
         },
         {
             "name": "symfony-cmf/routing",
-            "version": "3.0.4",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony-cmf/Routing.git",
-                "reference": "86c3e36a94f8e47a94f7b92ce09877ba3a0809fb"
+                "reference": "1f42d0f3465bac8ecc314409da1dc0742353fbbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony-cmf/Routing/zipball/86c3e36a94f8e47a94f7b92ce09877ba3a0809fb",
-                "reference": "86c3e36a94f8e47a94f7b92ce09877ba3a0809fb",
+                "url": "https://api.github.com/repos/symfony-cmf/Routing/zipball/1f42d0f3465bac8ecc314409da1dc0742353fbbd",
+                "reference": "1f42d0f3465bac8ecc314409da1dc0742353fbbd",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.0",
                 "psr/log": "^1.0 || ^2.0 || ^3.0",
-                "symfony/http-kernel": "^6.0 || ^7.0",
-                "symfony/routing": "^6.0 || ^7.0"
+                "symfony/http-kernel": "^6.0 || ^7.0 || ^8.0",
+                "symfony/routing": "^6.0 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "symfony/config": "^6.0 || ^7.0",
-                "symfony/dependency-injection": "^6.0 || ^7.0",
-                "symfony/event-dispatcher": "^6.0 || ^7.0",
-                "symfony/phpunit-bridge": "^7.0.3"
+                "symfony/config": "^6.0 || ^7.0 || ^8.0",
+                "symfony/dependency-injection": "^6.0 || ^7.0 || ^8.0",
+                "symfony/event-dispatcher": "^6.0 || ^7.0 || ^8.0",
+                "symfony/phpunit-bridge": "^7.0.3 || ^8.0"
             },
             "suggest": {
                 "symfony/event-dispatcher": "DynamicRouter can optionally trigger an event at the start of matching. Minimal version ^6.0"
@@ -7393,22 +7391,22 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony-cmf/Routing/issues",
-                "source": "https://github.com/symfony-cmf/Routing/tree/3.0.4"
+                "source": "https://github.com/symfony-cmf/Routing/tree/3.0.5"
             },
-            "time": "2024-12-02T22:52:12+00:00"
+            "time": "2025-12-03T09:56:29+00:00"
         },
         {
             "name": "symfony-cmf/routing-bundle",
-            "version": "3.1.1",
+            "version": "3.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony-cmf/routing-bundle.git",
-                "reference": "7aab681c812e93a41d70349f560976b93da049ca"
+                "reference": "ff1bfa3431d0e8ed876025b70ca784c14541d211"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony-cmf/routing-bundle/zipball/7aab681c812e93a41d70349f560976b93da049ca",
-                "reference": "7aab681c812e93a41d70349f560976b93da049ca",
+                "url": "https://api.github.com/repos/symfony-cmf/routing-bundle/zipball/ff1bfa3431d0e8ed876025b70ca784c14541d211",
+                "reference": "ff1bfa3431d0e8ed876025b70ca784c14541d211",
                 "shasum": ""
             },
             "require": {
@@ -7432,10 +7430,10 @@
                 "jackalope/jackalope-doctrine-dbal": "^2.0",
                 "matthiasnoback/symfony-config-test": "^4.1.0 || ^5.1.0",
                 "matthiasnoback/symfony-dependency-injection-test": "^4.1.0 || ^5.1.0",
-                "phpstan/phpstan": "^1.10",
-                "phpstan/phpstan-doctrine": "^1.3",
-                "phpstan/phpstan-phpunit": "^1.3",
-                "phpstan/phpstan-symfony": "^1.3",
+                "phpstan/phpstan": "^2.0",
+                "phpstan/phpstan-doctrine": "^2.0",
+                "phpstan/phpstan-phpunit": "^2.0",
+                "phpstan/phpstan-symfony": "^2.0",
                 "phpunit/phpunit": "^9.5.28",
                 "symfony-cmf/testing": "5.0.2",
                 "symfony/form": "^6.4 || ^7.0",
@@ -7446,6 +7444,7 @@
                 "symfony/translation": "^6.4 || ^7.0",
                 "symfony/twig-bundle": "^6.4 || ^7.0",
                 "symfony/validator": "^6.4 || ^7.0",
+                "symfony/var-exporter": "^6.4 || ^7.0",
                 "twig/twig": "^2.4.4 || ^3.0"
             },
             "suggest": {
@@ -7477,9 +7476,9 @@
             ],
             "support": {
                 "issues": "https://github.com/symfony-cmf/routing-bundle/issues",
-                "source": "https://github.com/symfony-cmf/routing-bundle/tree/3.1.1"
+                "source": "https://github.com/symfony-cmf/routing-bundle/tree/3.1.2"
             },
-            "time": "2025-03-31T07:12:15+00:00"
+            "time": "2025-12-03T10:01:27+00:00"
         },
         {
             "name": "symfony/asset",
@@ -9068,56 +9067,56 @@
         },
         {
             "name": "symfony/form",
-            "version": "v7.2.9",
+            "version": "v6.4.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "72dfbaf14138f0c857659536dd65af85f36b546c"
+                "reference": "5d922aea68ffe1637535713b35b29f6f34b7d81c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/72dfbaf14138f0c857659536dd65af85f36b546c",
-                "reference": "72dfbaf14138f0c857659536dd65af85f36b546c",
+                "url": "https://api.github.com/repos/symfony/form/zipball/5d922aea68ffe1637535713b35b29f6f34b7d81c",
+                "reference": "5d922aea68ffe1637535713b35b29f6f34b7d81c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=8.2",
+                "php": ">=8.1",
                 "symfony/deprecation-contracts": "^2.5|^3",
-                "symfony/event-dispatcher": "^6.4|^7.0",
-                "symfony/options-resolver": "^6.4|^7.0",
+                "symfony/event-dispatcher": "^5.4|^6.0|^7.0",
+                "symfony/options-resolver": "^5.4|^6.0|^7.0",
                 "symfony/polyfill-ctype": "~1.8",
                 "symfony/polyfill-intl-icu": "^1.21",
                 "symfony/polyfill-mbstring": "~1.0",
-                "symfony/property-access": "^6.4|^7.0",
+                "symfony/property-access": "^5.4|^6.0|^7.0",
                 "symfony/service-contracts": "^2.5|^3"
             },
             "conflict": {
-                "symfony/console": "<6.4",
-                "symfony/dependency-injection": "<6.4",
-                "symfony/doctrine-bridge": "<6.4",
-                "symfony/error-handler": "<6.4",
-                "symfony/framework-bundle": "<6.4",
-                "symfony/http-kernel": "<6.4",
-                "symfony/translation": "<6.4.3|>=7.0,<7.0.3",
+                "symfony/console": "<5.4",
+                "symfony/dependency-injection": "<5.4",
+                "symfony/doctrine-bridge": "<5.4.21|>=6,<6.2.7",
+                "symfony/error-handler": "<5.4",
+                "symfony/framework-bundle": "<5.4",
+                "symfony/http-kernel": "<5.4",
+                "symfony/translation": "<5.4.35|>=6.0,<6.3.12|>=6.4,<6.4.3|>=7.0,<7.0.3",
                 "symfony/translation-contracts": "<2.5",
-                "symfony/twig-bridge": "<6.4"
+                "symfony/twig-bridge": "<6.3"
             },
             "require-dev": {
                 "doctrine/collections": "^1.0|^2.0",
-                "symfony/config": "^6.4|^7.0",
-                "symfony/console": "^6.4|^7.0",
-                "symfony/dependency-injection": "^6.4|^7.0",
-                "symfony/expression-language": "^6.4|^7.0",
-                "symfony/html-sanitizer": "^6.4|^7.0",
-                "symfony/http-foundation": "^6.4|^7.0",
-                "symfony/http-kernel": "^6.4|^7.0",
-                "symfony/intl": "^6.4|^7.0",
-                "symfony/security-core": "^6.4|^7.0",
-                "symfony/security-csrf": "^6.4|^7.0",
-                "symfony/translation": "^6.4.3|^7.0.3",
-                "symfony/uid": "^6.4|^7.0",
-                "symfony/validator": "^6.4|^7.0",
-                "symfony/var-dumper": "^6.4|^7.0"
+                "symfony/config": "^5.4|^6.0|^7.0",
+                "symfony/console": "^5.4|^6.0|^7.0",
+                "symfony/dependency-injection": "^5.4|^6.0|^7.0",
+                "symfony/expression-language": "^5.4|^6.0|^7.0",
+                "symfony/html-sanitizer": "^6.1|^7.0",
+                "symfony/http-foundation": "^5.4|^6.0|^7.0",
+                "symfony/http-kernel": "^5.4|^6.0|^7.0",
+                "symfony/intl": "^5.4|^6.0|^7.0",
+                "symfony/security-core": "^6.2|^7.0",
+                "symfony/security-csrf": "^5.4|^6.0|^7.0",
+                "symfony/translation": "^5.4.35|~6.3.12|^6.4.3|^7.0.3",
+                "symfony/uid": "^5.4|^6.0|^7.0",
+                "symfony/validator": "^5.4|^6.0|^7.0",
+                "symfony/var-dumper": "^5.4|^6.0|^7.0"
             },
             "type": "library",
             "autoload": {
@@ -9145,7 +9144,7 @@
             "description": "Allows to easily create, process and reuse HTML forms",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/form/tree/v7.2.9"
+                "source": "https://github.com/symfony/form/tree/v6.4.27"
             },
             "funding": [
                 {
@@ -9165,7 +9164,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-24T11:52:02+00:00"
+            "time": "2025-10-10T09:11:15+00:00"
         },
         {
             "name": "symfony/framework-bundle",
@@ -13710,28 +13709,28 @@
         },
         {
             "name": "toflar/psr6-symfony-http-cache-store",
-            "version": "4.2.0",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Toflar/psr6-symfony-http-cache-store.git",
-                "reference": "9b3eb5b5f449a886b3ce202ddf3705e3d2ac79c9"
+                "reference": "9d4c4b49df283c0f8cca7e5c5f6a798c6debd215"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Toflar/psr6-symfony-http-cache-store/zipball/9b3eb5b5f449a886b3ce202ddf3705e3d2ac79c9",
-                "reference": "9b3eb5b5f449a886b3ce202ddf3705e3d2ac79c9",
+                "url": "https://api.github.com/repos/Toflar/psr6-symfony-http-cache-store/zipball/9d4c4b49df283c0f8cca7e5c5f6a798c6debd215",
+                "reference": "9d4c4b49df283c0f8cca7e5c5f6a798c6debd215",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.0",
-                "symfony/cache": "^6.0 || ^7.0",
-                "symfony/http-foundation": "^6.0 || ^7.0",
-                "symfony/http-kernel": "^6.0 || ^7.0",
-                "symfony/lock": "^6.0 || ^7.0",
-                "symfony/options-resolver": "^6.0 || ^7.0"
+                "php": "^8.1",
+                "symfony/cache": "^6.0 || ^7.0 || ^8.0",
+                "symfony/http-foundation": "^6.0 || ^7.0 || ^8.0",
+                "symfony/http-kernel": "^6.0 || ^7.0 || ^8.0",
+                "symfony/lock": "^6.0 || ^7.0 || ^8.0",
+                "symfony/options-resolver": "^6.0 || ^7.0 || ^8.0"
             },
             "require-dev": {
-                "symfony/phpunit-bridge": "^6.0 || ^7.0"
+                "symfony/phpunit-bridge": "^7.4 || ^8.0"
             },
             "type": "library",
             "autoload": {
@@ -13752,9 +13751,9 @@
             "description": "An alternative store implementation for Symfony's HttpCache reverse proxy that supports auto-pruning of expired entries and cache invalidation by tags.",
             "support": {
                 "issues": "https://github.com/Toflar/psr6-symfony-http-cache-store/issues",
-                "source": "https://github.com/Toflar/psr6-symfony-http-cache-store/tree/4.2.0"
+                "source": "https://github.com/Toflar/psr6-symfony-http-cache-store/tree/4.3.0"
             },
-            "time": "2023-09-18T14:46:04+00:00"
+            "time": "2025-12-03T11:50:50+00:00"
         },
         {
             "name": "twig/extra-bundle",
@@ -13899,16 +13898,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.22.0",
+            "version": "v3.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "4509984193026de413baf4ba80f68590a7f2c51d"
+                "reference": "1de2ec1fc43ab58a4b7e80b214b96bfc895750f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/4509984193026de413baf4ba80f68590a7f2c51d",
-                "reference": "4509984193026de413baf4ba80f68590a7f2c51d",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/1de2ec1fc43ab58a4b7e80b214b96bfc895750f3",
+                "reference": "1de2ec1fc43ab58a4b7e80b214b96bfc895750f3",
                 "shasum": ""
             },
             "require": {
@@ -13962,7 +13961,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.22.0"
+                "source": "https://github.com/twigphp/Twig/tree/v3.22.1"
             },
             "funding": [
                 {
@@ -13974,7 +13973,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-10-29T15:56:47+00:00"
+            "time": "2025-11-16T16:01:12+00:00"
         },
         {
             "name": "ua-parser/uap-php",
@@ -14212,7 +14211,8 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "contao/conflicts": 20
+        "contao/conflicts": 20,
+        "heimrichhannot/contao-flare-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

@@ -41,7 +41,8 @@
         "contao/news-bundle": "5.3.*",
         "contao/newsletter-bundle": "5.3.*",
         "heimrichhannot/contao-flare-bundle": "dev-main",
-        "heimrichhannot/contao-form-type-bundle": "^0.2"
+        "heimrichhannot/contao-form-type-bundle": "^0.2",
+        "symfony/framework-bundle": "^6.4"
     },
     "repositories": [
         {
@@ -56,6 +57,11 @@
         "contao-component-dir": "assets",
         "public-dir": "public"
     },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
     "scripts": {
         "post-install-cmd": [
             "@php vendor/bin/contao-setup"
@@ -63,5 +69,12 @@
         "post-update-cmd": [
             "@php vendor/bin/contao-setup"
         ]
+    },
+    "config": {
+        "allow-plugins": {
+            "contao-components/installer": true,
+            "php-http/discovery": true,
+            "contao/manager-plugin": true
+        }
     }
 }
