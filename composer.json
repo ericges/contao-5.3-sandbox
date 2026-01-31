@@ -34,6 +34,7 @@
         "contao-components/swiper": "^12",
         "contao/calendar-bundle": "5.3.*",
         "contao/comments-bundle": "5.3.*",
+        "contao/core-bundle": "5.3.*",
         "contao/conflicts": "*@dev",
         "contao/faq-bundle": "5.3.*",
         "contao/listing-bundle": "5.3.*",
