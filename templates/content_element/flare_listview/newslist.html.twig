@@ -1,0 +1,124 @@
+{% extends '@Contao/content_element/flare_listview.html.twig' %}
+
+{% set flare_css_classes = [flare_css_classes ?? '', 'flare-newslist'] %}
+
+{% block filter %}
+    {% set form = flare_list.form.createView %}
+
+    <section class="flare-newslist__filters" aria-labelledby="flare-newslist-filter-title">
+        <div class="flare-newslist__filter-heading">
+            <div>
+                <p class="flare-newslist__eyebrow">News entdecken</p>
+                <h2 id="flare-newslist-filter-title">Beiträge filtern</h2>
+            </div>
+            <a class="flare-newslist__reset" href="{{ app.request.pathInfo }}">Filter zurücksetzen</a>
+        </div>
+
+        {{ form_start(form, {attr: {class: 'flare-newslist__filter-form'}}) }}
+            <div class="flare-newslist__filter-grid">
+                <div class="flare-newslist__field flare-newslist__field--search">
+                    {{ form_row(form.suche) }}
+                </div>
+                <div class="flare-newslist__field flare-newslist__field--author">
+                    {{ form_row(form.autor, {label: 'Autor'}) }}
+                </div>
+                <fieldset class="flare-newslist__field flare-newslist__field--period">
+                    <legend>Zeitraum</legend>
+                    <div class="flare-newslist__date-grid">
+                        {{ form_row(form.zeitraum.from, {label: 'Von'}) }}
+                        {{ form_row(form.zeitraum.to, {label: 'Bis'}) }}
+                    </div>
+                    {{ form_errors(form.zeitraum) }}
+                </fieldset>
+                <div class="flare-newslist__field flare-newslist__field--featured">
+                    {{ form_row(form.hervorgehoben) }}
+                </div>
+            </div>
+            {{ form_rest(form) }}
+            <button type="submit" class="flare-newslist__submit">
+                Ergebnisse anzeigen
+                <span aria-hidden="true">→</span>
+            </button>
+        {{ form_end(form) }}
+    </section>
+{% endblock %}
+
+{% block list %}
+    <div class="flare-newslist__result-heading" aria-live="polite">
+        <p class="flare-newslist__eyebrow">Aktuelles</p>
+        <p class="flare-newslist__count">
+            <strong>{{ flare_list.count }}</strong>
+            {{ flare_list.count == 1 ? 'Beitrag gefunden' : 'Beiträge gefunden' }}
+        </p>
+    </div>
+
+    {% if flare_list.entries %}
+        <ol class="flare-newslist__grid">
+            {% for entry in flare_list.entries %}
+                {% set detail_url = flare_list.to(entry.id) %}
+                <li class="flare-newslist__item">
+                    <article class="flare-newslist__card">
+                        {% if entry.addImage and entry.singleSRC %}
+                            {% set image = figure(entry.singleSRC, [720, 405, 'crop'], {
+                                linkHref: detail_url,
+                                metadata: {alt: entry.headline},
+                                options: {
+                                    attr: {class: 'flare-newslist__figure'},
+                                    img_attr: {loading: 'lazy'}
+                                }
+                            }) %}
+                            {% if image %}
+                                {{ include('@ContaoCore/Image/Studio/figure.html.twig', {figure: image}) }}
+                            {% endif %}
+                        {% endif %}
+
+                        <div class="flare-newslist__card-body">
+                            <div class="flare-newslist__meta">
+                                <time datetime="{{ entry.date|date('Y-m-d') }}">{{ entry.date|date('d.m.Y') }}</time>
+                                {% if entry.featured %}
+                                    <span class="flare-newslist__badge">Empfohlen</span>
+                                {% endif %}
+                            </div>
+
+                            <h2 class="flare-newslist__title">
+                                <a href="{{ detail_url }}">{{ entry.headline }}</a>
+                            </h2>
+
+                            {% if entry.subheadline %}
+                                <p class="flare-newslist__subheadline">{{ entry.subheadline }}</p>
+                            {% endif %}
+
+                            {% if entry.teaser %}
+                                {% set teaser = entry.teaser|striptags|trim %}
+                                <p class="flare-newslist__teaser">
+                                    {{ teaser|slice(0, 180) }}{% if teaser|length > 180 %}…{% endif %}
+                                </p>
+                            {% endif %}
+
+                            <a class="flare-newslist__more" href="{{ detail_url }}" aria-label="{{ entry.headline }} weiterlesen">
+                                Weiterlesen <span aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </article>
+                </li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <div class="flare-newslist__empty">
+            <strong>Keine passenden Beiträge gefunden.</strong>
+            <p>Ändere die Filter oder setze sie zurück, um wieder alle Nachrichten zu sehen.</p>
+            <a class="flare-newslist__reset flare-newslist__reset--empty" href="{{ app.request.pathInfo }}">Alle Beiträge anzeigen</a>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block pagination %}
+    {% if flare_list.paginator.lastPageNumber > 1 %}
+        <div class="flare-newslist__pagination">
+            {{ include('@Contao/flare/paginator.html.twig', {
+                paginator: flare_list.paginator,
+                use_default_styles: true
+            }) }}
+        </div>
+    {% endif %}
+{% endblock %}
