@@ -60,6 +60,7 @@
                     <article class="flare-newslist__card">
                         {% if entry.addImage and entry.singleSRC %}
                             {% set image = figure(entry.singleSRC, [720, 405, 'crop'], {
+                                linkAttributes: {rel: 'noopener'},
                                 linkHref: detail_url,
                                 metadata: {alt: entry.headline},
                                 options: {
