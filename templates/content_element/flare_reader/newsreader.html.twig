@@ -1,0 +1,78 @@
+{% extends '@Contao/content_element/flare_reader.html.twig' %}
+
+{% set flare_css_classes = [flare_css_classes ?? '', 'flare-newsreader'] %}
+
+{% block headline %}{% endblock %}
+
+{% block content %}
+    {% set author = model.getRelated('author') %}
+
+    {{ include('@Contao/flare/back_button.html.twig', {
+        back_link: flare_reader.backLink,
+        label: 'Zurück zur Übersicht',
+        aria_label: 'Zurück zur Newsübersicht',
+        link_class: 'flare-newsreader__back'
+    }, with_context = false) }}
+
+    <article class="flare-newsreader__article">
+        <header class="flare-newsreader__header">
+            <p class="flare-newsreader__eyebrow">FLARE News</p>
+
+            <div class="flare-newsreader__meta">
+                <time datetime="{{ model.date|date('Y-m-d') }}">{{ model.date|date('d.m.Y') }}</time>
+                {% if author %}
+                    <span aria-hidden="true">·</span>
+                    <span>Von {{ author.name }}</span>
+                {% endif %}
+                {% if model.featured %}
+                    <span class="flare-newsreader__badge">Empfohlen</span>
+                {% endif %}
+            </div>
+
+            <h1 class="flare-newsreader__title">{{ model.headline }}</h1>
+
+            {% if model.subheadline %}
+                <p class="flare-newsreader__subheadline">{{ model.subheadline }}</p>
+            {% endif %}
+        </header>
+
+        {% if model.addImage and model.singleSRC %}
+            {% set image = figure(model.singleSRC, [1280, 720, 'crop'], {
+                metadata: {
+                    alt: model.alt ?: model.headline,
+                    title: model.imageTitle ?: null,
+                    caption: model.caption ?: null
+                },
+                options: {
+                    attr: {class: 'flare-newsreader__figure'},
+                    img_attr: {loading: 'eager', fetchpriority: 'high'}
+                }
+            }) %}
+            {% if image %}
+                {{ include('@ContaoCore/Image/Studio/figure.html.twig', {figure: image}) }}
+            {% endif %}
+        {% endif %}
+
+        {% if model.teaser %}
+            <div class="flare-newsreader__lead">
+                {{ model.teaser|csp_inline_styles|insert_tag_raw|encode_email|raw }}
+            </div>
+        {% endif %}
+
+        <div class="flare-newsreader__body">
+            {{ frontend_module('newsreader', {
+                news_archives: [model.pid],
+                news_template: 'news_full',
+                news_keepCanonical: true
+            }) }}
+        </div>
+    </article>
+
+    {{ include('@Contao/flare/back_button.html.twig', {
+        back_link: flare_reader.backLink,
+        label: 'Alle Beiträge',
+        aria_label: 'Zurück zur Newsübersicht',
+        link_class: 'flare-newsreader__back flare-newsreader__back--footer'
+    }, with_context = false) }}
+{% endblock %}
+
